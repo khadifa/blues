@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body style="background-color: lightBlue">
+
+<h2 style="text-align: center;">Our Service Provider</h2>
+  
+
+<table>
+  <tr style="background-color: blue">
+    <th>PortName</th>
+    <th>Contact</th>
+    <th>Loaction</th>
+    <th>Status</th>
+  </tr>
+  {% for i in appls %}
+  <tr>
+    <th>{{i.PortName}}</th>
+    <th>{{i.Contact}}</th>
+    <th>{{i.Location}}</th>
+    <th>{{i.Status}}</th>
+  </tr>
+  {% endfor %}
+  
+</table>
+
+</body>
+</html>
+
